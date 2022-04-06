@@ -64,7 +64,7 @@ class _SearchFilterState extends State<SearchFilter> {
                                 padding: EdgeInsets.zero,
                                 scrollDirection: Axis.vertical,
                                 physics: const ScrollPhysics(),
-                                childAspectRatio: (5 / 4.6),
+                                childAspectRatio: (5 / 4.4),
                                 crossAxisCount: 2,
                                 crossAxisSpacing: 12.0,
                                 mainAxisSpacing: 12.0,
@@ -107,11 +107,11 @@ class _SearchFilterState extends State<SearchFilter> {
                                               ),
                                               Center(
                                                 child: Image.asset(
-                                                  ImgConstants.SHOP,
+                                                  ImgConstants.VEG,
                                                   width: MediaQuery.of(context)
                                                           .size
                                                           .height *
-                                                      0.04,
+                                                      0.06,
                                                 ),
                                               ),
                                               SizedBox(

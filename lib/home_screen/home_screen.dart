@@ -266,82 +266,78 @@ class _ProState extends State<HomeScreen> {
                             ],
                           ),
 
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.23,
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText:
-                                                      "Organic Bananas",
-                                                  selectproductImage:
-                                                      ImgConstants.BANANA,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.BANANA,
-                                      title: "Organic Bananas",
-                                      subtitle: "7pcs, Price",
-                                      price: "\$4.99",
-                                    ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText:
+                                                    "Organic Bananas",
+                                                selectproductImage:
+                                                    ImgConstants.BANANA,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.BANANA,
+                                    title: "Organic Bananas",
+                                    subtitle: "7pcs, Price",
+                                    price: "\$4.99",
                                   ),
-                                  const SizedBox(
-                                    width: 15,
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText: "Red Apple",
+                                                selectproductImage:
+                                                    ImgConstants.APPLE,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.APPLE,
+                                    title: "Red Apple",
+                                    subtitle: "1 KG Price",
+                                    price: "\$2.99",
                                   ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText:
-                                                      "Red Apple",
-                                                  selectproductImage:
-                                                      ImgConstants.APPLE,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.APPLE,
-                                      title: "Red Apple",
-                                      subtitle: "1 KG Price",
-                                      price: "\$2.99",
-                                    ),
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText: "Bakery",
+                                                selectproductImage:
+                                                    ImgConstants.BAKERY,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.BAKERY,
+                                    title: "Bakery",
+                                    subtitle: "1 KG Price",
+                                    price: "\$1.99",
                                   ),
-                                  const SizedBox(
-                                    width: 15,
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText: "Bakery",
-                                                  selectproductImage:
-                                                      ImgConstants.BAKERY,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.BAKERY,
-                                      title: "Bakery",
-                                      subtitle: "1 KG Price",
-                                      price: "\$1.99",
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
 
@@ -378,83 +374,79 @@ class _ProState extends State<HomeScreen> {
                             ],
                           ),
 
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.23,
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText:
-                                                      "Apple Juice",
-                                                  selectproductImage:
-                                                      ImgConstants.APPLEJUICE,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.APPLEJUICE,
-                                      title: "Apple Juice",
-                                      subtitle: "1 Litre Price",
-                                      price: "\$3.99",
-                                    ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText:
+                                                    "Apple Juice",
+                                                selectproductImage:
+                                                    ImgConstants.APPLEJUICE,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.APPLEJUICE,
+                                    title: "Apple Juice",
+                                    subtitle: "1 Litre Price",
+                                    price: "\$3.99",
                                   ),
-                                  const SizedBox(
-                                    width: 15,
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText:
+                                                    "Mango Juice",
+                                                selectproductImage:
+                                                    ImgConstants.MANGOJUICE,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.MANGOJUICE,
+                                    title: "Mango Juice",
+                                    subtitle: "1 Litre Price",
+                                    price: "\$1.99",
                                   ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText:
-                                                      "Mango Juice",
-                                                  selectproductImage:
-                                                      ImgConstants.MANGOJUICE,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.MANGOJUICE,
-                                      title: "Mango Juice",
-                                      subtitle: "1 Litre Price",
-                                      price: "\$1.99",
-                                    ),
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText: "Fresh Milk",
+                                                selectproductImage:
+                                                    ImgConstants.MILK,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.MILK,
+                                    title: "Fresh Milk",
+                                    subtitle: "1 Litre Price",
+                                    price: "\$2.99",
                                   ),
-                                  const SizedBox(
-                                    width: 15,
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText:
-                                                      "Fresh Milk",
-                                                  selectproductImage:
-                                                      ImgConstants.MILK,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.MILK,
-                                      title: "Fresh Milk",
-                                      subtitle: "1 Litre Price",
-                                      price: "\$2.99",
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
 
@@ -575,82 +567,78 @@ class _ProState extends State<HomeScreen> {
                             ],
                           ),
 
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.23,
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText:
-                                                      "Beaf Bone",
-                                                  selectproductImage:
-                                                      ImgConstants.MEAT,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.MEAT,
-                                      title: "Beaf Bone",
-                                      subtitle: "1 KG Price",
-                                      price: "\$8.99",
-                                    ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText: "Beaf Bone",
+                                                selectproductImage:
+                                                    ImgConstants.MEAT,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.MEAT,
+                                    title: "Beaf Bone",
+                                    subtitle: "1 KG Price",
+                                    price: "\$8.99",
                                   ),
-                                  const SizedBox(
-                                    width: 15,
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText:
+                                                    "Boiler Chicken",
+                                                selectproductImage:
+                                                    ImgConstants.BONE,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.BONE,
+                                    title: "Boiler Chicken",
+                                    subtitle: "1 KG Price",
+                                    price: "\$6.99",
                                   ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText:
-                                                      "Boiler Chicken",
-                                                  selectproductImage:
-                                                      ImgConstants.BONE,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.BONE,
-                                      title: "Boiler Chicken",
-                                      subtitle: "1 KG Price",
-                                      price: "\$6.99",
-                                    ),
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ProductDetail(
+                                                selectproductText: "Meat",
+                                                selectproductImage:
+                                                    ImgConstants.NONVEG,
+                                              )),
+                                    );
+                                  },
+                                  child: const ExclusiveOffer(
+                                    image: ImgConstants.NONVEG,
+                                    title: "Meat",
+                                    subtitle: "1 KG Price",
+                                    price: "\$10.99",
                                   ),
-                                  const SizedBox(
-                                    width: 15,
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ProductDetail(
-                                                  selectproductText: "Meat",
-                                                  selectproductImage:
-                                                      ImgConstants.NONVEG,
-                                                )),
-                                      );
-                                    },
-                                    child: const ExclusiveOffer(
-                                      image: ImgConstants.NONVEG,
-                                      title: "Meat",
-                                      subtitle: "1 KG Price",
-                                      price: "\$10.99",
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ],

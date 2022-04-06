@@ -30,7 +30,7 @@ class ExclusiveOffer extends StatelessWidget {
           border: Border.all(
               color: bordercolor ?? ColorConstant.COLOR_GREY, width: 1)),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0.0, 0, 0, 0),
+        padding: const EdgeInsets.fromLTRB(0.0, 0, 0, 10),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const SizedBox(
             height: 15,
