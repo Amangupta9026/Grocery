@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../constance/color_constant.dart';
 import '../constance/icon_constant.dart';
-import '../widget/flushbar.dart';
 
 class OtpScreen extends StatefulWidget {
-  const OtpScreen({Key? key}) : super(key: key);
+  const OtpScreen({super.key});
 
   @override
   State<OtpScreen> createState() => _OtpScreenState();
@@ -72,11 +71,13 @@ class _OtpScreenState extends State<OtpScreen> {
                           ),
                           Text(
                             "Enter your 4-digit code",
-                            style:
-                                Theme.of(context).textTheme.headline6?.copyWith(
-                                      color: ColorConstant.COLOR_BLACK,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                           const SizedBox(
                             height: 20,
@@ -118,23 +119,25 @@ class _OtpScreenState extends State<OtpScreen> {
                           onPressed: () {},
                           child: Text(
                             "Resend code",
-                            style:
-                                Theme.of(context).textTheme.subtitle2?.copyWith(
-                                      color: ColorConstant.COLOR_RED,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_RED,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           )),
                       InkWell(
                         onTap: () {
-                          if (otpController.text.length == 4) {
-                            Navigator.pushNamed(context, "/mapScreen");
-                          } else if (otpController.text.isEmpty) {
-                            UtilsFlushBar.showDefaultSnackbar(
-                                context, "Please enter otp");
-                          } else if (otpController.text.length < 4) {
-                            UtilsFlushBar.showDefaultSnackbar(
-                                context, "Please enter coreect otp");
-                          }
+                          // if (otpController.text.length == 4) {
+                          Navigator.pushNamed(context, "/mapScreen");
+                          // } else if (otpController.text.isEmpty) {
+                          //   UtilsFlushBar.showDefaultSnackbar(
+                          //       context, "Please enter otp");
+                          // } else if (otpController.text.length < 4) {
+                          //   UtilsFlushBar.showDefaultSnackbar(
+                          //       context, "Please enter coreect otp");
+                          // }
                         },
                         child: const CircleAvatar(
                           backgroundColor: ColorConstant.COLOR_RED,

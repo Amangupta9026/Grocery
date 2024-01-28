@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(nector_grocery LANGUAGES CXX)
+project(grocery_uikit LANGUAGES CXX)
 
-set(BINARY_NAME "nector_grocery")
+set(BINARY_NAME "grocery_uikit")
 
 cmake_policy(SET CMP0063 NEW)
 

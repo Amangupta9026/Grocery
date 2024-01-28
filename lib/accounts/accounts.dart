@@ -1,8 +1,10 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:nector_grocery/checkout/faviorite.dart';
-import 'package:nector_grocery/checkout/my_cart.dart';
-import 'package:nector_grocery/login_page/signin.dart';
+import 'package:grocery_uikit/checkout/faviorite.dart';
+import 'package:grocery_uikit/checkout/my_cart.dart';
+import 'package:grocery_uikit/login_page/signin.dart';
 
 import '../constance/color_constant.dart';
 import '../constance/icon_constant.dart';
@@ -11,10 +13,10 @@ import '../home_screen/home_screen.dart';
 import '../widget/bottom_navigation_widget.dart';
 
 class Accounts extends StatefulWidget {
-  const Accounts({Key? key}) : super(key: key);
+  const Accounts({super.key});
 
   @override
-  _AccountsState createState() => _AccountsState();
+  State createState() => _AccountsState();
 }
 
 class _AccountsState extends State<Accounts> {
@@ -86,7 +88,7 @@ class _AccountsState extends State<Accounts> {
                               "Aman Gupta",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.bold,
@@ -108,7 +110,7 @@ class _AccountsState extends State<Accounts> {
                         Text(
                           "amangupta723@gmail.com",
                           style:
-                              Theme.of(context).textTheme.subtitle2?.copyWith(
+                              Theme.of(context).textTheme.titleSmall?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -291,8 +293,8 @@ class _AccountsState extends State<Accounts> {
                   const Spacer(),
                   Text(
                     "Log Out",
-                    style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                          color: ColorConstant.COLOR_WHITE,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          color: ColorConstant.COLOR_BLACK,
                           fontWeight: FontWeight.w600,
                         ),
                   ),
@@ -346,7 +348,7 @@ class _AccountsState extends State<Accounts> {
                 const SizedBox(width: 10.0),
                 Text(
                   title ?? "",
-                  style: Theme.of(context).textTheme.caption?.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: ColorConstant.COLOR_BLACK,
                       fontSize: 14.0,
                       fontWeight: FontWeight.w600),
@@ -374,7 +376,7 @@ class _AccountsState extends State<Accounts> {
     Widget okButton = TextButton(
       child: Text(
         "OK",
-        style: Theme.of(context).textTheme.subtitle2!.copyWith(
+        style: Theme.of(context).textTheme.titleSmall!.copyWith(
               color: ColorConstant.COLOR_RED,
               fontWeight: FontWeight.w500,
             ),
@@ -393,7 +395,7 @@ class _AccountsState extends State<Accounts> {
     Widget okCancel = TextButton(
       child: Text(
         "Cancel",
-        style: Theme.of(context).textTheme.subtitle2?.copyWith(
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(
               color: ColorConstant.COLOR_BLACK,
               fontWeight: FontWeight.w500,
             ),

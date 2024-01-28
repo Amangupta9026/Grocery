@@ -6,46 +6,47 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static TextTheme _buildTextTheme(TextTheme base) {
     return base.copyWith(
-      headline6: GoogleFonts.montserrat(
+      titleLarge: GoogleFonts.montserrat(
           textStyle: TextStyle(
-        color: base.headline6?.color,
+        color: base.titleLarge?.color,
         fontSize: 20,
         fontWeight: FontWeight.w500,
       )),
-      subtitle1: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.subtitle1?.color, fontSize: 18)),
-      subtitle2: GoogleFonts.montserrat(
+      titleMedium: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.titleMedium?.color, fontSize: 18)),
+      titleSmall: GoogleFonts.montserrat(
           textStyle: TextStyle(
-              color: base.subtitle2?.color,
+              color: base.titleSmall?.color,
               fontSize: 14,
               fontWeight: FontWeight.w500)),
-      bodyText2: GoogleFonts.montserrat(
+      bodyMedium: GoogleFonts.montserrat(
           textStyle: TextStyle(
-        color: base.bodyText2?.color,
+        color: base.bodyMedium?.color,
         fontSize: 16,
         fontWeight: FontWeight.normal,
       )),
-      bodyText1: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.bodyText1?.color, fontSize: 14)),
-      button: GoogleFonts.montserrat(
+      bodyLarge: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.bodyLarge?.color, fontSize: 14)),
+      labelLarge: GoogleFonts.montserrat(
           textStyle: TextStyle(
-              color: base.button?.color,
+              color: base.labelLarge?.color,
               fontSize: 14,
               fontWeight: FontWeight.w500)),
-      caption: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.caption?.color, fontSize: 12)),
-      headline4: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.headline4?.color, fontSize: 26)),
-      headline3: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.headline3?.color, fontSize: 48)),
-      headline2: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.headline2?.color, fontSize: 60)),
-      headline1: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.headline1?.color, fontSize: 96)),
-      headline5: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.headline5?.color, fontSize: 24)),
-      overline: GoogleFonts.montserrat(
-          textStyle: TextStyle(color: base.overline?.color, fontSize: 10)),
+      bodySmall: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.bodySmall?.color, fontSize: 12)),
+      headlineMedium: GoogleFonts.montserrat(
+          textStyle:
+              TextStyle(color: base.headlineMedium?.color, fontSize: 26)),
+      displaySmall: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.displaySmall?.color, fontSize: 48)),
+      displayMedium: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.displayMedium?.color, fontSize: 60)),
+      displayLarge: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.displayLarge?.color, fontSize: 96)),
+      headlineSmall: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.headlineSmall?.color, fontSize: 24)),
+      labelSmall: GoogleFonts.montserrat(
+          textStyle: TextStyle(color: base.labelSmall?.color, fontSize: 10)),
     );
   }
 }
@@ -54,7 +55,7 @@ class HexColor extends Color {
   static int _getColorFromHex(String hexColor) {
     hexColor = hexColor.toUpperCase().replaceAll("#", "");
     if (hexColor.length == 6) {
-      hexColor = "FF" + hexColor;
+      hexColor = "FF$hexColor";
     }
     return int.parse(hexColor, radix: 16);
   }

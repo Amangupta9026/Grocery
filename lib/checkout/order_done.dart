@@ -4,7 +4,7 @@ import '../constance/color_constant.dart';
 import '../constance/icon_constant.dart';
 
 class OrderDone extends StatelessWidget {
-  const OrderDone({Key? key}) : super(key: key);
+  const OrderDone({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class OrderDone extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 10.0, bottom: 10),
                     child: Text(
                       "Track Order",
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: ColorConstant.COLOR_WHITE,
                             fontWeight: FontWeight.w400,
                           ),
@@ -46,7 +46,7 @@ class OrderDone extends StatelessWidget {
                 child: Text(
                   "Back to home",
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: ColorConstant.COLOR_BLACK,
                         fontWeight: FontWeight.w500,
                       ),
@@ -76,7 +76,7 @@ class OrderDone extends StatelessWidget {
             Text(
               "Your Order has been accepted",
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline6?.copyWith(
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     color: ColorConstant.COLOR_BLACK,
                     fontWeight: FontWeight.w700,
                   ),
@@ -89,7 +89,7 @@ class OrderDone extends StatelessWidget {
               child: Text(
                 "Your items has been placcd and is on it’s way to being processed",
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                style: Theme.of(context).textTheme.titleSmall?.copyWith(
                       color: ColorConstant.COLOR_GREY,
                       fontWeight: FontWeight.w500,
                     ),

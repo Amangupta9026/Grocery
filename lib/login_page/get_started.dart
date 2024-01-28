@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/constance/icon_constant.dart';
+import 'package:grocery_uikit/constance/icon_constant.dart';
 
 import '../constance/color_constant.dart';
 
 class GetStarted extends StatelessWidget {
-  const GetStarted({Key? key}) : super(key: key);
+  const GetStarted({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class GetStarted extends StatelessWidget {
                   ),
                   Text(
                     "Welcome to Our Store",
-                    style: Theme.of(context).textTheme.headline4?.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                           color: ColorConstant.COLOR_WHITE,
                           fontWeight: FontWeight.w400,
                         ),
@@ -46,7 +46,7 @@ class GetStarted extends StatelessWidget {
                   ),
                   Text(
                     "Ger your groceries in as fast as one hour",
-                    style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: ColorConstant.COLOR_WHITE,
                           fontWeight: FontWeight.w300,
                         ),
@@ -71,8 +71,8 @@ class GetStarted extends StatelessWidget {
                         child: Text(
                           "Get Started",
                           style:
-                              Theme.of(context).textTheme.subtitle1?.copyWith(
-                                    color: ColorConstant.COLOR_WHITE,
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),

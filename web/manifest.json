@@ -1,6 +1,6 @@
 {
-    "name": "nector_grocery",
-    "short_name": "nector_grocery",
+    "name": "grocery_uikit",
+    "short_name": "grocery_uikit",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

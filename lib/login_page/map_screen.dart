@@ -4,7 +4,7 @@ import '../constance/color_constant.dart';
 import '../constance/icon_constant.dart';
 
 class MapScreen extends StatefulWidget {
-  const MapScreen({Key? key}) : super(key: key);
+  const MapScreen({super.key});
 
   @override
   State<MapScreen> createState() => _MapScreenState();
@@ -95,7 +95,7 @@ class _MapScreenState extends State<MapScreen> {
                           "Select Your Location",
                           textAlign: TextAlign.center,
                           style:
-                              Theme.of(context).textTheme.headline6?.copyWith(
+                              Theme.of(context).textTheme.titleLarge?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -110,11 +110,13 @@ class _MapScreenState extends State<MapScreen> {
                           child: Text(
                             "Switch on your location to stay in tune with what’s happening in your area",
                             textAlign: TextAlign.center,
-                            style:
-                                Theme.of(context).textTheme.subtitle1?.copyWith(
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.w500,
+                                ),
                           ),
                         ),
 
@@ -128,7 +130,7 @@ class _MapScreenState extends State<MapScreen> {
                               "Your Zone",
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText2
+                                  .bodyMedium
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w400,
@@ -149,13 +151,13 @@ class _MapScreenState extends State<MapScreen> {
                             value: _selectedLocation,
                             onChanged: (newValue) {
                               setState(() {
-                                _selectedLocation = newValue as String?;
+                                _selectedLocation = newValue;
                               });
                             },
                             items: _locations.map((location) {
                               return DropdownMenuItem(
-                                child: Text(location),
                                 value: location,
+                                child: Text(location),
                               );
                             }).toList(),
                           ),
@@ -173,7 +175,7 @@ class _MapScreenState extends State<MapScreen> {
                               "Your Area",
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText2
+                                  .bodyMedium
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w400,
@@ -194,13 +196,13 @@ class _MapScreenState extends State<MapScreen> {
                             value: _selectedAreaLocation,
                             onChanged: (newValue) {
                               setState(() {
-                                _selectedAreaLocation = newValue as String?;
+                                _selectedAreaLocation = newValue;
                               });
                             },
                             items: _arealocations.map((location) {
                               return DropdownMenuItem(
-                                child: Text(location),
                                 value: location,
+                                child: Text(location),
                               );
                             }).toList(),
                           ),
@@ -251,9 +253,9 @@ class _MapScreenState extends State<MapScreen> {
                               "Submit",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
-                                    color: ColorConstant.COLOR_WHITE,
+                                    color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w400,
                                   ),
                             ),

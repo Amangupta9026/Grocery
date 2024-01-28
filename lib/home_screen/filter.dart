@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../constance/color_constant.dart';
 
 class Filter extends StatefulWidget {
-  const Filter({Key? key}) : super(key: key);
+  const Filter({super.key});
 
   @override
   State<Filter> createState() => _FilterState();
@@ -73,7 +73,7 @@ class _FilterState extends State<Filter> {
                 title: Text(
                   "Filters",
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: ColorConstant.COLOR_BLACK,
                         fontWeight: FontWeight.w600,
                       ),
@@ -95,7 +95,7 @@ class _FilterState extends State<Filter> {
                     padding: const EdgeInsets.only(top: 10.0, bottom: 10),
                     child: Text(
                       "Apply Filter",
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: ColorConstant.COLOR_WHITE,
                             fontWeight: FontWeight.w400,
                           ),
@@ -115,11 +115,13 @@ class _FilterState extends State<Filter> {
                           child: Text(
                             "Categories",
                             textAlign: TextAlign.start,
-                            style:
-                                Theme.of(context).textTheme.headline6?.copyWith(
-                                      color: ColorConstant.COLOR_BLACK,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                         ),
 
@@ -160,7 +162,7 @@ class _FilterState extends State<Filter> {
                                 textAlign: TextAlign.start,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline6
+                                    .titleLarge
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,

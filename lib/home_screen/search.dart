@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/home_screen/product_detail.dart';
+import 'package:grocery_uikit/home_screen/product_detail.dart';
 
 import '../constance/color_constant.dart';
 import '../constance/icon_constant.dart';
 
 class SearchFilter extends StatefulWidget {
-  const SearchFilter({Key? key}) : super(key: key);
+  const SearchFilter({super.key});
 
   @override
   State<SearchFilter> createState() => _SearchFilterState();
@@ -43,7 +43,7 @@ class _SearchFilterState extends State<SearchFilter> {
                           focusColor: null,
                           hintText: 'Search',
                           hintStyle:
-                              Theme.of(context).textTheme.subtitle1?.copyWith(
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -126,7 +126,7 @@ class _SearchFilterState extends State<SearchFilter> {
                                                   textAlign: TextAlign.center,
                                                   style: Theme.of(context)
                                                       .textTheme
-                                                      .subtitle1
+                                                      .titleMedium
                                                       ?.copyWith(
                                                         color: ColorConstant
                                                             .COLOR_BLACK,
@@ -144,7 +144,7 @@ class _SearchFilterState extends State<SearchFilter> {
                                                   textAlign: TextAlign.center,
                                                   style: Theme.of(context)
                                                       .textTheme
-                                                      .subtitle2
+                                                      .titleSmall
                                                       ?.copyWith(
                                                         color: ColorConstant
                                                             .COLOR_GREY,
@@ -168,15 +168,12 @@ class _SearchFilterState extends State<SearchFilter> {
                                                           .spaceBetween,
                                                   children: [
                                                     Text(
-                                                      "\$" +
-                                                          _foundUsers[index]
-                                                                  ['price']
-                                                              .toString(),
+                                                      "\$${_foundUsers[index]['price']}",
                                                       textAlign:
                                                           TextAlign.center,
                                                       style: Theme.of(context)
                                                           .textTheme
-                                                          .subtitle2
+                                                          .titleSmall
                                                           ?.copyWith(
                                                             color: ColorConstant
                                                                 .COLOR_BLACK,

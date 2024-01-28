@@ -6,8 +6,7 @@ class PulseWidget extends StatelessWidget {
   final String? image;
   final String? title;
   final Color? color;
-  const PulseWidget({Key? key, this.image, this.title, this.color})
-      : super(key: key);
+  const PulseWidget({super.key, this.image, this.title, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,7 @@ class PulseWidget extends StatelessWidget {
               Text(
                 title!,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: ColorConstant.COLOR_BLACK,
                       fontWeight: FontWeight.w600,
                     ),

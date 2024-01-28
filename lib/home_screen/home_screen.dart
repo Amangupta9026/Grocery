@@ -1,10 +1,11 @@
-import 'package:carousel_pro_nullsafety/carousel_pro_nullsafety.dart';
+// import 'package:carousel_pro_nullsafety/carousel_pro_nullsafety.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
-import 'package:nector_grocery/accounts/accounts.dart';
-import 'package:nector_grocery/home_screen/product_detail.dart';
-import 'package:nector_grocery/home_screen/search.dart';
-import 'package:nector_grocery/widget/exclusive_offer.dart';
+import 'package:grocery_uikit/accounts/accounts.dart';
+import 'package:grocery_uikit/home_screen/product_detail.dart';
+import 'package:grocery_uikit/home_screen/search.dart';
+import 'package:grocery_uikit/widget/exclusive_offer.dart';
 
 import '../checkout/faviorite.dart';
 import '../checkout/my_cart.dart';
@@ -17,19 +18,22 @@ import '../widget/pulse_widget.dart';
 import 'category.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _ProState();
 }
 
 class _ProState extends State<HomeScreen> {
+  List<Image> carouselItems = [
+    Image.asset(ImgConstants.BANNER, width: double.infinity),
+  ];
   @override
   Widget build(BuildContext context) {
-    RandomColor _randomColor = RandomColor();
+    RandomColor randomColor = RandomColor();
 
-    Color _color =
-        _randomColor.randomColor(colorBrightness: ColorBrightness.light);
+    Color color =
+        randomColor.randomColor(colorBrightness: ColorBrightness.light);
 
     bool selectedIndex = true;
 
@@ -143,9 +147,9 @@ class _ProState extends State<HomeScreen> {
                           width: 5,
                         ),
                         Text(
-                          "Dhaka, Banassre",
+                          "Gorakhpur, UP",
                           style:
-                              Theme.of(context).textTheme.subtitle1?.copyWith(
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -190,7 +194,7 @@ class _ProState extends State<HomeScreen> {
                                     "Search",
                                     style: Theme.of(context)
                                         .textTheme
-                                        .subtitle1
+                                        .titleMedium
                                         ?.copyWith(
                                           color: ColorConstant.COLOR_BLACK,
                                           fontWeight: FontWeight.w600,
@@ -201,41 +205,33 @@ class _ProState extends State<HomeScreen> {
                             ),
                           ),
 
-                          const SizedBox(
-                            height: 10,
-                          ),
+                          const SizedBox(height: 20),
 
                           SizedBox(
-                            height: 120.0,
-                            child: Card(
-                              elevation: 4.0,
-                              color: ColorConstant.COLOR_WHITE,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15.0),
-                              ),
-                              child: Swiper(
-                                autoplay: true,
-                                itemCount: 3,
-                                itemBuilder:
-                                    (BuildContext context, int index) =>
-                                        Carousel(
-                                  boxFit: BoxFit.cover,
-                                  images: [
-                                    Image.asset(
-                                      ImgConstants.BANNER,
-                                      width: double.infinity,
-                                    ),
-                                  ],
-                                  dotSize: 4.0,
-                                  dotSpacing: 15.0,
-                                  dotColor: ColorConstant.COLOR_RED,
-                                  indicatorBgPadding: 5.0,
-                                  dotBgColor: Colors.transparent,
-                                  borderRadius: true,
-                                ),
-                              ),
-                            ),
-                          ),
+                              height: 120.0,
+                              child: Card(
+                                  elevation: 4.0,
+                                  color: ColorConstant.COLOR_WHITE,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: CarouselSlider(
+                                      items: carouselItems,
+                                      options: CarouselOptions(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.2, // Customize the height of the carousel
+                                          autoPlay: true, // Enable auto-play
+                                          enlargeCenterPage:
+                                              true, // Increase the size of the center item
+                                          enableInfiniteScroll:
+                                              true, // Enable infinite scroll
+                                          onPageChanged: (index, reason) {
+                                            // Optional callback when the page changes
+                                            // You can use it to update any additional UI components
+                                          })))),
+                          const SizedBox(height: 10),
 
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -244,7 +240,7 @@ class _ProState extends State<HomeScreen> {
                                 "Exclusive Offer",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,
@@ -256,7 +252,7 @@ class _ProState extends State<HomeScreen> {
                                   "See all",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle1
+                                      .titleMedium
                                       ?.copyWith(
                                         color: ColorConstant.COLOR_RED,
                                         fontWeight: FontWeight.w400,
@@ -352,7 +348,7 @@ class _ProState extends State<HomeScreen> {
                                 "Best Selling",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,
@@ -364,7 +360,7 @@ class _ProState extends State<HomeScreen> {
                                   "See all",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle1
+                                      .titleMedium
                                       ?.copyWith(
                                         color: ColorConstant.COLOR_RED,
                                         fontWeight: FontWeight.w400,
@@ -461,7 +457,7 @@ class _ProState extends State<HomeScreen> {
                                 "Groceries",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline6
+                                    .titleLarge
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,
@@ -473,7 +469,7 @@ class _ProState extends State<HomeScreen> {
                                   "See all",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle1
+                                      .titleMedium
                                       ?.copyWith(
                                         color: ColorConstant.COLOR_RED,
                                         fontWeight: FontWeight.w400,
@@ -527,7 +523,7 @@ class _ProState extends State<HomeScreen> {
                                       child: PulseWidget(
                                         image: ImgConstants.RICE,
                                         title: "Rice",
-                                        color: _color,
+                                        color: color,
                                       ),
                                     ),
                                   ],
@@ -545,7 +541,7 @@ class _ProState extends State<HomeScreen> {
                                 "Non-Veg",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline6
+                                    .titleLarge
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,
@@ -557,7 +553,7 @@ class _ProState extends State<HomeScreen> {
                                   "See all",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle1
+                                      .titleMedium
                                       ?.copyWith(
                                         color: ColorConstant.COLOR_RED,
                                         fontWeight: FontWeight.w400,

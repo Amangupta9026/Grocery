@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/home_screen/filter.dart';
-import 'package:nector_grocery/home_screen/product_detail.dart';
+import 'package:grocery_uikit/home_screen/filter.dart';
+import 'package:grocery_uikit/home_screen/product_detail.dart';
 
 import '../constance/color_constant.dart';
 import '../constance/icon_constant.dart';
 
 class Beverages extends StatefulWidget {
-  const Beverages({Key? key}) : super(key: key);
+  const Beverages({super.key});
 
   @override
   State<Beverages> createState() => _BeveragesState();
@@ -24,7 +24,7 @@ class _BeveragesState extends State<Beverages> {
               backgroundColor: ColorConstant.COLOR_WHITE,
               title: Text(
                 "Beverages",
-                style: Theme.of(context).textTheme.headline6?.copyWith(
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: ColorConstant.COLOR_BLACK,
                       fontWeight: FontWeight.w700,
                     ),
@@ -124,7 +124,7 @@ class _BeveragesState extends State<Beverages> {
                                             textAlign: TextAlign.center,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .subtitle1
+                                                .titleMedium
                                                 ?.copyWith(
                                                   color:
                                                       ColorConstant.COLOR_BLACK,
@@ -141,7 +141,7 @@ class _BeveragesState extends State<Beverages> {
                                             textAlign: TextAlign.center,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .subtitle2
+                                                .titleSmall
                                                 ?.copyWith(
                                                   color:
                                                       ColorConstant.COLOR_GREY,
@@ -164,7 +164,7 @@ class _BeveragesState extends State<Beverages> {
                                               textAlign: TextAlign.center,
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .subtitle1
+                                                  .titleMedium
                                                   ?.copyWith(
                                                     color: ColorConstant
                                                         .COLOR_BLACK,

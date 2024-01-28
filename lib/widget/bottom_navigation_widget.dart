@@ -7,8 +7,7 @@ class BottomAppBarWidget extends StatelessWidget {
   final Color? color;
 
   const BottomAppBarWidget(
-      {Key? key, this.assetImage, this.text, this.onTap, this.color})
-      : super(key: key);
+      {super.key, this.assetImage, this.text, this.onTap, this.color});
 
   @override
   Widget build(BuildContext context) {

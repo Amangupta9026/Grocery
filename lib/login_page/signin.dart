@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/constance/icon_constant.dart';
+import 'package:grocery_uikit/constance/icon_constant.dart';
 
 import '../constance/color_constant.dart';
 import '../widget/flushbar.dart';
 
 class SignInWith extends StatefulWidget {
-  const SignInWith({Key? key}) : super(key: key);
+  const SignInWith({super.key});
 
   @override
   State<SignInWith> createState() => _SignInWithState();
@@ -37,7 +37,7 @@ class _SignInWithState extends State<SignInWith> {
                 children: [
                   Text(
                     "Get your groceries with nectar",
-                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                           color: ColorConstant.COLOR_BLACK,
                           fontWeight: FontWeight.w600,
                         ),
@@ -74,7 +74,7 @@ class _SignInWithState extends State<SignInWith> {
                             top: 15,
                             right: 0,
                             left: 0), // add padding to adjust icon
-                        child: Icon(Icons.help_outline),
+                        child: Icon(Icons.phone_android),
                       ),
                     ),
                   ),
@@ -109,8 +109,8 @@ class _SignInWithState extends State<SignInWith> {
                         child: Text(
                           "Submit",
                           style:
-                              Theme.of(context).textTheme.subtitle1?.copyWith(
-                                    color: ColorConstant.COLOR_WHITE,
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
@@ -146,9 +146,9 @@ class _SignInWithState extends State<SignInWith> {
                                 "SignIn",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     ?.copyWith(
-                                      color: ColorConstant.COLOR_WHITE,
+                                      color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
@@ -181,9 +181,9 @@ class _SignInWithState extends State<SignInWith> {
                                 "SignUp",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     ?.copyWith(
-                                      color: ColorConstant.COLOR_WHITE,
+                                      color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
@@ -194,24 +194,20 @@ class _SignInWithState extends State<SignInWith> {
                     ],
                   ),
 
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
 
                   Center(
                     child: Text(
                       "Or connect with social media",
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
                             color: ColorConstant.COLOR_BLACK,
                             fontWeight: FontWeight.w400,
                           ),
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 30,
-                  ),
+                  const SizedBox(height: 20),
 
                   ElevatedButton(
                     style: ButtonStyle(
@@ -233,17 +229,19 @@ class _SignInWithState extends State<SignInWith> {
                             ImgConstants.GOOGLE,
                             height: 25,
                             width: 25,
-                            color: ColorConstant.COLOR_WHITE,
+                            color: ColorConstant.COLOR_BLACK,
                           ),
                           const Spacer(),
                           Text(
                             "Continue with Google",
                             textAlign: TextAlign.center,
-                            style:
-                                Theme.of(context).textTheme.subtitle1?.copyWith(
-                                      color: ColorConstant.COLOR_WHITE,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                           const Spacer(),
                         ],
@@ -275,17 +273,19 @@ class _SignInWithState extends State<SignInWith> {
                             ImgConstants.FACEBOOK,
                             height: 25,
                             width: 25,
-                            color: ColorConstant.COLOR_WHITE,
+                            color: ColorConstant.COLOR_BLACK,
                           ),
                           const Spacer(),
                           Text(
                             "Continue with Facebook",
                             textAlign: TextAlign.center,
-                            style:
-                                Theme.of(context).textTheme.subtitle1?.copyWith(
-                                      color: ColorConstant.COLOR_WHITE,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                           const Spacer(),
                         ],

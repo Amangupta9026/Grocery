@@ -3,14 +3,14 @@ import 'dart:developer';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/constance/color_constant.dart';
+import 'package:grocery_uikit/constance/color_constant.dart';
 
 import '../constance/icon_constant.dart';
 import '../widget/flushbar.dart';
 import 'login_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  const SignUpScreen({super.key});
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
@@ -64,7 +64,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     textAlign: TextAlign.center,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headline6
+                                        .titleLarge
                                         ?.copyWith(
                                           color: ColorConstant.COLOR_BLACK,
                                           fontWeight: FontWeight.w600,
@@ -78,7 +78,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     textAlign: TextAlign.center,
                                     style: Theme.of(context)
                                         .textTheme
-                                        .subtitle1
+                                        .titleMedium
                                         ?.copyWith(
                                           color: Colors.grey,
                                           fontWeight: FontWeight.w500,
@@ -103,7 +103,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Text(
                         "Username",
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: ColorConstant.COLOR_BLACK,
                               fontWeight: FontWeight.w400,
                             ),
@@ -129,7 +129,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Text(
                         "Email",
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: ColorConstant.COLOR_BLACK,
                               fontWeight: FontWeight.w400,
                             ),
@@ -165,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Text(
                         "Password",
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: ColorConstant.COLOR_BLACK,
                               fontWeight: FontWeight.w400,
                             ),
@@ -191,34 +191,40 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       RichText(
                           text: TextSpan(
                         text: "By continuing you agree to our",
-                        style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: ColorConstant.COLOR_BLACK,
                               fontWeight: FontWeight.w400,
                             ),
                         children: <TextSpan>[
                           TextSpan(
                             text: " Terms of Service",
-                            style:
-                                Theme.of(context).textTheme.bodyText2?.copyWith(
-                                      color: ColorConstant.COLOR_RED,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_RED,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                           TextSpan(
                             text: " and ",
-                            style:
-                                Theme.of(context).textTheme.bodyText2?.copyWith(
-                                      color: ColorConstant.COLOR_BLACK,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w400,
+                                ),
                           ),
                           TextSpan(
                             text: "Privacy Policy",
-                            style:
-                                Theme.of(context).textTheme.bodyText2?.copyWith(
-                                      color: ColorConstant.COLOR_RED,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_RED,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                         ],
                       )),
@@ -263,9 +269,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               textAlign: TextAlign.center,
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
-                                    color: ColorConstant.COLOR_WHITE,
+                                    color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -282,7 +288,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 text: "Already have an account?",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle2
+                                    .titleSmall
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w400,
@@ -303,7 +309,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     text: " Sign In",
                                     style: Theme.of(context)
                                         .textTheme
-                                        .subtitle1
+                                        .titleMedium
                                         ?.copyWith(
                                           color: ColorConstant.COLOR_RED,
                                           fontWeight: FontWeight.w600,

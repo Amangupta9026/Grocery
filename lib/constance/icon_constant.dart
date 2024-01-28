@@ -50,10 +50,9 @@ class ImgConstants {
 
   static const String TICK = "assets/images/verify.png";
 
-   static const String PROFILE_PERSON = "assets/images/profile_person.png";
+  static const String PROFILE_PERSON = "assets/images/profile_person.jpeg";
 
   // Splash
 
-    static const String SPLASH = "assets/images/splash.jpg";
- 
+  static const String SPLASH = "assets/images/splash.png";
 }

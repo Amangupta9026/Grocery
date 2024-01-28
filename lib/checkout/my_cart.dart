@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/checkout/order_done.dart';
+import 'package:grocery_uikit/checkout/order_done.dart';
 
 import '../accounts/accounts.dart';
 import '../constance/color_constant.dart';
@@ -10,7 +10,7 @@ import '../widget/bottom_navigation_widget.dart';
 import 'faviorite.dart';
 
 class MyCart extends StatefulWidget {
-  const MyCart({Key? key}) : super(key: key);
+  const MyCart({super.key});
 
   @override
   State<MyCart> createState() => _MyCartState();
@@ -29,7 +29,7 @@ class _MyCartState extends State<MyCart> {
             centerTitle: true,
             title: Text(
               'My Cart',
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: ColorConstant.COLOR_BLACK,
                     fontWeight: FontWeight.w600,
                   ),
@@ -160,7 +160,7 @@ class _MyCartState extends State<MyCart> {
                                               "Apple",
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .subtitle1
+                                                  .titleMedium
                                                   ?.copyWith(
                                                     color: ColorConstant
                                                         .COLOR_BLACK,
@@ -182,7 +182,7 @@ class _MyCartState extends State<MyCart> {
                                         "1 KG Price",
                                         style: Theme.of(context)
                                             .textTheme
-                                            .subtitle2
+                                            .titleSmall
                                             ?.copyWith(
                                               color: ColorConstant.COLOR_GREY,
                                               fontWeight: FontWeight.w600,
@@ -218,7 +218,7 @@ class _MyCartState extends State<MyCart> {
                                                 "1",
                                                 style: Theme.of(context)
                                                     .textTheme
-                                                    .subtitle1
+                                                    .titleMedium
                                                     ?.copyWith(
                                                       color: ColorConstant
                                                           .COLOR_BLACK,
@@ -241,7 +241,7 @@ class _MyCartState extends State<MyCart> {
                                             "\$4.99.00",
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .subtitle1
+                                                .titleMedium
                                                 ?.copyWith(
                                                   color:
                                                       ColorConstant.COLOR_BLACK,
@@ -289,10 +289,11 @@ class _MyCartState extends State<MyCart> {
                       padding: const EdgeInsets.only(top: 17.0, bottom: 17),
                       child: Text(
                         "Proceed to Pay",
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              color: ColorConstant.COLOR_WHITE,
-                              fontWeight: FontWeight.w400,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w400,
+                                ),
                       ),
                     ),
                   ),
@@ -331,7 +332,7 @@ class _MyCartState extends State<MyCart> {
                           "Checkout",
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle1
+                              .titleMedium
                               ?.copyWith(
                                   color: ColorConstant.COLOR_BLACK,
                                   fontWeight: FontWeight.w700,
@@ -363,7 +364,7 @@ class _MyCartState extends State<MyCart> {
                             "Delivery",
                             style: Theme.of(context)
                                 .textTheme
-                                .caption
+                                .bodySmall
                                 ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontSize: 16.0),
@@ -375,7 +376,7 @@ class _MyCartState extends State<MyCart> {
                                 "Select Method",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .caption
+                                    .bodySmall
                                     ?.copyWith(
                                         color: ColorConstant.COLOR_BLACK,
                                         fontWeight: FontWeight.bold,
@@ -406,14 +407,14 @@ class _MyCartState extends State<MyCart> {
                             "Payment",
                             style: Theme.of(context)
                                 .textTheme
-                                .caption
+                                .bodySmall
                                 ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontSize: 16.0),
                           ),
                           const Spacer(),
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               Icon(
                                 Icons.payment,
                                 size: 16,
@@ -443,7 +444,7 @@ class _MyCartState extends State<MyCart> {
                             "Promo Code",
                             style: Theme.of(context)
                                 .textTheme
-                                .caption
+                                .bodySmall
                                 ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontSize: 16.0),
@@ -455,7 +456,7 @@ class _MyCartState extends State<MyCart> {
                                 "Pick discount",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .caption
+                                    .bodySmall
                                     ?.copyWith(
                                         color: ColorConstant.COLOR_BLACK,
                                         fontWeight: FontWeight.bold,
@@ -485,7 +486,7 @@ class _MyCartState extends State<MyCart> {
                           Text(
                             "Total Cost",
                             style:
-                                Theme.of(context).textTheme.caption?.copyWith(
+                                Theme.of(context).textTheme.bodySmall?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontSize: 16.0,
                                     ),
@@ -497,7 +498,7 @@ class _MyCartState extends State<MyCart> {
                                 "\$137",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .caption
+                                    .bodySmall
                                     ?.copyWith(
                                         color: ColorConstant.COLOR_BLACK,
                                         fontSize: 16.0,
@@ -525,17 +526,19 @@ class _MyCartState extends State<MyCart> {
                         textAlign: TextAlign.start,
                         text: TextSpan(
                             text: "By placing an order you agree to our",
-                            style:
-                                Theme.of(context).textTheme.subtitle2?.copyWith(
-                                      color: ColorConstant.COLOR_BLACK,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w400,
+                                ),
                             children: <TextSpan>[
                               TextSpan(
                                 text: " Terms ",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle2
+                                    .titleSmall
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.bold,
@@ -545,7 +548,7 @@ class _MyCartState extends State<MyCart> {
                                 text: " and ",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle2
+                                    .titleSmall
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w400,
@@ -555,7 +558,7 @@ class _MyCartState extends State<MyCart> {
                                 text: " Conditions ",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle2
+                                    .titleSmall
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.bold,
@@ -578,7 +581,7 @@ class _MyCartState extends State<MyCart> {
                             child: Text("Place Order",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     ?.copyWith(
                                         color: ColorConstant.COLOR_WHITE,
                                         fontSize: 18.0,

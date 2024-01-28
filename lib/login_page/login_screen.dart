@@ -1,14 +1,14 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/constance/color_constant.dart';
-import 'package:nector_grocery/login_page/sign_up.dart';
+import 'package:grocery_uikit/constance/color_constant.dart';
+import 'package:grocery_uikit/login_page/sign_up.dart';
 
 import '../constance/icon_constant.dart';
 import '../widget/flushbar.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 textAlign: TextAlign.center,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline6
+                                    .titleLarge
                                     ?.copyWith(
                                       color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w600,
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 textAlign: TextAlign.center,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     ?.copyWith(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.w500,
@@ -96,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     "Email",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: ColorConstant.COLOR_BLACK,
                           fontWeight: FontWeight.w400,
                         ),
@@ -131,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     "Password",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: ColorConstant.COLOR_BLACK,
                           fontWeight: FontWeight.w400,
                         ),
@@ -158,7 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       "Forgot Password ?",
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: ColorConstant.COLOR_BLACK,
                             fontWeight: FontWeight.w400,
                           ),
@@ -208,8 +208,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           "Log In",
                           textAlign: TextAlign.center,
                           style:
-                              Theme.of(context).textTheme.subtitle1?.copyWith(
-                                    color: ColorConstant.COLOR_WHITE,
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
@@ -224,10 +224,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       textAlign: TextAlign.center,
                       text: TextSpan(
                         text: "Don't have an account? ",
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              color: ColorConstant.COLOR_BLACK,
-                              fontWeight: FontWeight.w400,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w400,
+                                ),
                         children: [
                           TextSpan(
                             recognizer: TapGestureRecognizer()
@@ -240,11 +241,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                 );
                               },
                             text: "Sign Up",
-                            style:
-                                Theme.of(context).textTheme.subtitle1?.copyWith(
-                                      color: ColorConstant.COLOR_RED,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_RED,
+                                  fontWeight: FontWeight.w400,
+                                ),
                           ),
                         ],
                       ),

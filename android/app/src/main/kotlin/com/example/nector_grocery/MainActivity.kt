@@ -1,4 +1,4 @@
-package com.example.nector_grocery
+package com.silverstar.grocery_uikit
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -11,14 +11,13 @@ class ExclusiveOffer extends StatelessWidget {
   final Color? color;
   final Color? bordercolor;
   const ExclusiveOffer(
-      {Key? key,
+      {super.key,
       this.image,
       this.title,
       this.subtitle,
       this.price,
       this.color,
-      this.bordercolor})
-      : super(key: key);
+      this.bordercolor});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +48,7 @@ class ExclusiveOffer extends StatelessWidget {
             child: Text(
               title!,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.subtitle2?.copyWith(
+              style: Theme.of(context).textTheme.titleSmall?.copyWith(
                     color: ColorConstant.COLOR_BLACK,
                     fontWeight: FontWeight.w600,
                   ),
@@ -68,7 +67,7 @@ class ExclusiveOffer extends StatelessWidget {
               child: Text(
                 subtitle!,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                style: Theme.of(context).textTheme.titleSmall?.copyWith(
                       color: ColorConstant.COLOR_GREY,
                       fontWeight: FontWeight.w600,
                     ),
@@ -89,7 +88,7 @@ class ExclusiveOffer extends StatelessWidget {
                       Text(
                         price!,
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                        style: Theme.of(context).textTheme.titleSmall?.copyWith(
                               color: ColorConstant.COLOR_BLACK,
                               fontWeight: FontWeight.w600,
                             ),

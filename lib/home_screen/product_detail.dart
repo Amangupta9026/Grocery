@@ -4,8 +4,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:nector_grocery/checkout/my_cart.dart';
-import 'package:nector_grocery/constance/icon_constant.dart';
+import 'package:grocery_uikit/checkout/my_cart.dart';
+import 'package:grocery_uikit/constance/icon_constant.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -15,8 +15,7 @@ class ProductDetail extends StatefulWidget {
   final String? selectproductImage;
   final String? selectproductText;
   const ProductDetail(
-      {Key? key, this.selectproductImage, this.selectproductText})
-      : super(key: key);
+      {super.key, this.selectproductImage, this.selectproductText});
 
   @override
   State<ProductDetail> createState() => _ProductDetailState();
@@ -122,7 +121,7 @@ class _ProductDetailState extends State<ProductDetail> {
                               widget.selectproductText ?? "Carrot",
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6
+                                  .titleLarge
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
@@ -161,7 +160,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                       "1",
                                       style: Theme.of(context)
                                           .textTheme
-                                          .subtitle1
+                                          .titleMedium
                                           ?.copyWith(
                                             color: ColorConstant.COLOR_BLACK,
                                             fontWeight: FontWeight.w600,
@@ -183,7 +182,7 @@ class _ProductDetailState extends State<ProductDetail> {
                               "\$4.99",
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6
+                                  .titleLarge
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
@@ -208,7 +207,7 @@ class _ProductDetailState extends State<ProductDetail> {
                               "Product Detail",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
@@ -227,7 +226,7 @@ class _ProductDetailState extends State<ProductDetail> {
                         Text(
                           "${widget.selectproductText}  are nutritious. ${widget.selectproductText} may be good for health. ${widget.selectproductText} may be good for your heart. As part of a healtful and varied diet.",
                           style:
-                              Theme.of(context).textTheme.subtitle1?.copyWith(
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
                                     color: ColorConstant.COLOR_GREY,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -249,7 +248,7 @@ class _ProductDetailState extends State<ProductDetail> {
                               "Nutritions",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
@@ -267,7 +266,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                       "100g",
                                       style: Theme.of(context)
                                           .textTheme
-                                          .subtitle1
+                                          .titleMedium
                                           ?.copyWith(
                                             color: ColorConstant.COLOR_BLACK,
                                             fontWeight: FontWeight.w600,
@@ -304,7 +303,7 @@ class _ProductDetailState extends State<ProductDetail> {
                               "Review",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .titleMedium
                                   ?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
@@ -371,9 +370,9 @@ class _ProductDetailState extends State<ProductDetail> {
                                 "Add To Basket",
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     ?.copyWith(
-                                      color: ColorConstant.COLOR_WHITE,
+                                      color: ColorConstant.COLOR_BLACK,
                                       fontWeight: FontWeight.w400,
                                     ),
                               ),

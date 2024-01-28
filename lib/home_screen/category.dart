@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/accounts/accounts.dart';
-import 'package:nector_grocery/home_screen/product_detail.dart';
-import 'package:nector_grocery/home_screen/search.dart';
-import 'package:nector_grocery/widget/exclusive_offer.dart';
+import 'package:grocery_uikit/accounts/accounts.dart';
+import 'package:grocery_uikit/home_screen/product_detail.dart';
+import 'package:grocery_uikit/home_screen/search.dart';
+import 'package:grocery_uikit/widget/exclusive_offer.dart';
 
 import '../checkout/faviorite.dart';
 import '../checkout/my_cart.dart';
@@ -12,7 +12,7 @@ import '../widget/bottom_navigation_widget.dart';
 import 'home_screen.dart';
 
 class CategoryProduct extends StatefulWidget {
-  const CategoryProduct({Key? key}) : super(key: key);
+  const CategoryProduct({super.key});
 
   @override
   State<CategoryProduct> createState() => _CategoryProductState();
@@ -115,7 +115,7 @@ class _CategoryProductState extends State<CategoryProduct> {
                   child: Text(
                     "Category",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           color: ColorConstant.COLOR_BLACK,
                           fontWeight: FontWeight.w700,
                         ),
@@ -154,11 +154,13 @@ class _CategoryProductState extends State<CategoryProduct> {
                           ),
                           Text(
                             "Search",
-                            style:
-                                Theme.of(context).textTheme.subtitle1?.copyWith(
-                                      color: ColorConstant.COLOR_BLACK,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                         ]),
                       ),

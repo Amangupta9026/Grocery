@@ -8,7 +8,8 @@ class FavioriteWidget extends StatelessWidget {
   final String? subtitle;
   final String? price;
 
-  const FavioriteWidget({Key? key, this.image, this.title, this.subtitle, this.price}) : super(key: key);
+  const FavioriteWidget(
+      {super.key, this.image, this.title, this.subtitle, this.price});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,6 @@ class FavioriteWidget extends StatelessWidget {
                 children: [
                   Image.asset(
                     image!,
-                 
                     height: 50,
                     width: 50,
                   ),
@@ -44,9 +44,9 @@ class FavioriteWidget extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                         title!,
+                          title!,
                           style:
-                              Theme.of(context).textTheme.subtitle1?.copyWith(
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
                                     color: ColorConstant.COLOR_BLACK,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -56,12 +56,14 @@ class FavioriteWidget extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                           price!,
-                            style:
-                                Theme.of(context).textTheme.subtitle1?.copyWith(
-                                      color: ColorConstant.COLOR_BLACK,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            price!,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w600,
+                                ),
                           ),
                           const SizedBox(
                             width: 10,
@@ -78,8 +80,8 @@ class FavioriteWidget extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-               subtitle!,
-                    style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                    subtitle!,
+                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
                           color: ColorConstant.COLOR_GREY,
                           fontWeight: FontWeight.w600,
                         ),

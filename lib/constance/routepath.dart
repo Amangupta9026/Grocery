@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/login_page/login_screen.dart';
-import 'package:nector_grocery/login_page/map_screen.dart';
-import 'package:nector_grocery/login_page/otp_page.dart';
-import 'package:nector_grocery/login_page/sign_up.dart';
-import 'package:nector_grocery/login_page/splash_screen.dart';
+import 'package:grocery_uikit/login_page/login_screen.dart';
+import 'package:grocery_uikit/login_page/map_screen.dart';
+import 'package:grocery_uikit/login_page/otp_page.dart';
+import 'package:grocery_uikit/login_page/sign_up.dart';
+import 'package:grocery_uikit/login_page/splash_screen.dart';
 
 import '../home_screen/home_screen.dart';
 import '../login_page/signin.dart';

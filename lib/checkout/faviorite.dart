@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/widget/faviorite_widget.dart';
+import 'package:grocery_uikit/widget/faviorite_widget.dart';
 
 import '../accounts/accounts.dart';
 import '../constance/color_constant.dart';
@@ -10,7 +10,7 @@ import '../widget/bottom_navigation_widget.dart';
 import 'my_cart.dart';
 
 class Faviorite extends StatefulWidget {
-  const Faviorite({Key? key}) : super(key: key);
+  const Faviorite({super.key});
 
   @override
   State<Faviorite> createState() => _FavioriteState();
@@ -29,7 +29,7 @@ class _FavioriteState extends State<Faviorite> {
             centerTitle: true,
             title: Text(
               'Faviorite',
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: ColorConstant.COLOR_BLACK,
                     fontWeight: FontWeight.w600,
                   ),
@@ -215,10 +215,11 @@ class _FavioriteState extends State<Faviorite> {
                       padding: const EdgeInsets.only(top: 17.0, bottom: 17),
                       child: Text(
                         "Add All To Cart",
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              color: ColorConstant.COLOR_WHITE,
-                              fontWeight: FontWeight.w400,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  color: ColorConstant.COLOR_BLACK,
+                                  fontWeight: FontWeight.w400,
+                                ),
                       ),
                     ),
                   ),

@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "nector_grocery" "\0"
+            VALUE "FileDescription", "grocery_uikit" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "nector_grocery" "\0"
+            VALUE "InternalName", "grocery_uikit" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "nector_grocery.exe" "\0"
-            VALUE "ProductName", "nector_grocery" "\0"
+            VALUE "OriginalFilename", "grocery_uikit.exe" "\0"
+            VALUE "ProductName", "grocery_uikit" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

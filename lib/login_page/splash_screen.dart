@@ -1,29 +1,26 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:nector_grocery/constance/color_constant.dart';
-import 'package:nector_grocery/constance/icon_constant.dart';
-import 'package:nector_grocery/login_page/get_started.dart';
+import 'package:grocery_uikit/constance/color_constant.dart';
+import 'package:grocery_uikit/constance/icon_constant.dart';
+import 'package:grocery_uikit/login_page/get_started.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  State createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-   
-
     _loadNextScreen();
     super.initState();
   }
 
-
   _loadNextScreen() async {
-     if (!mounted) return;
+    if (!mounted) return;
     Timer(const Duration(seconds: 3), () {
       Navigator.pushAndRemoveUntil<dynamic>(
         context,
@@ -37,7 +34,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-   
     return Container(
       color: ColorConstant.COLOR_RED,
       child: SafeArea(
@@ -52,6 +48,4 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-
-
 }
